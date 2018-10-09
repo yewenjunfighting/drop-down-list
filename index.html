@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>drop-down list</title>
+    <link rel="stylesheet" href="./public/index.css">
+</head>
+<body>
+    <div id="app">
+        <div class="main" v-clickoutside.esc="handleClose" @keydown="handleClose">
+            <button @click="show = !show">点击显示下拉菜单</button>
+            <div class="dropDown" v-show="show">
+                <p>下拉框的内容，点击外面区域可关闭</p>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+    <script src="clickOutside.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
